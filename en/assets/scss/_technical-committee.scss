@@ -1,0 +1,84 @@
+#technical-committee {
+    .event-calendar {
+        .ui-datepicker {
+            width: 100%;
+            td {
+                text-align: center;
+                span,
+                a {
+                    text-align: center
+                }
+            }
+        }
+        .ui-datepicker-calendar {
+            a {
+                border: none;
+                background: transparent;
+                color: black;
+                width: 30px;
+                display: inline-block;
+                &.ui-state-active {
+                    color: white;
+                    margin: 0 auto;
+                    border-color: darken($theme-color, 10%);
+                    background: $theme-color;
+                }
+                &.ui-state-highlight {
+                    border: 1px solid lighten($theme-color, 20%);
+                    background: lighten($theme-color, 40%);
+                    color: $theme-color;
+                }
+            }
+        }
+        .event {
+            a {
+                display: inline-block;
+                width: 30px;
+                color: white !important;
+                border-color: darken($theme-color, 10%);
+                background: $theme-color;
+            }
+        }
+    }
+    .scheduled-projects {
+        margin-top: 30px;
+        h5 {
+            margin-top: 0;
+            font-weight: bold;
+            color: $theme-color;
+        }
+        a {
+            color: $theme-color;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .my-tasks {
+        .pagination {
+            margin-top: 0;
+        }
+        .btn-field {
+            .btn {
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #technical-committee {
+        .my-tasks {
+            .pagination-nav {
+                width: 100%;
+            }
+            .btn-field {
+                width: 100%;
+            }
+        }
+    }
+}

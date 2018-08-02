@@ -1,0 +1,136 @@
+#final-report {
+    .company-info {
+        margin-bottom: 20px;
+        h4 {
+            margin: 0 0 5px;
+            font-size: 1.143em;
+            font-family: $lato-bold;
+        }
+    }
+    .panel {
+        margin: 0;
+        +.panel {
+            margin-top: 30px;
+        }
+        .panel-heading {
+            position: relative;
+            padding-right: 40px;
+            .panel-title {
+                @include text-truncate;
+            }
+            .toggle-btn {
+                position: absolute;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                right: 10px;
+                top: 10px;
+                border-radius: 50%;
+                color: black;
+                text-align: center;
+                background: white;
+                &:before {
+                    font-family: 'Flaticon';
+                    content: $font-Flaticon-minus;
+                    font-size: 10px;
+                    line-height: 20px;
+                    vertical-align: top;
+                }
+                &.collapsed {
+                    &:before {
+                        content: $font-Flaticon-plus;
+                    }
+                }
+            }
+            a {
+                &:hover,
+                &:focus {
+                    text-decoration: none !important;
+                }
+            }
+        }
+        .panel-body {
+            .row {
+                +.row {
+                    margin-top: 20px;
+                }
+            }
+            .btn {
+                white-space: normal;
+                min-width: 160px;
+            }
+            .btn-field {
+                padding-top: 25px;
+                .btn {
+                    display: block;
+                    +.btn {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            textarea {
+                height: 82px;
+                resize: vertical;
+            }
+            h4 {
+                margin: 0 0 5px;
+                font-size: 1em;
+                color: $theme-color;
+                font-family: $lato-bold;
+            }
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    #final-report {
+        .panel {
+            .panel-body {
+                [class*="col-sm-"] {
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                .row {
+                    +.row {
+                        margin-top: 15px;
+                    }
+                }
+                .btn-field {
+                    padding-top: 0;
+                    .btn {
+                        display: inline-block;
+                        +.btn {
+                            margin-top: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    #final-report {
+        .panel {
+            .panel-body {
+                .btn-field {
+                    .btn {
+                        display: block;
+                        +.btn {
+                            margin-top: 10px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

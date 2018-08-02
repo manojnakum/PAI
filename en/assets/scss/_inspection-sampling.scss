@@ -1,0 +1,70 @@
+#inspection-sampling {
+    .detail-block {
+        margin-bottom: 20px;
+        h4 {
+            margin: 0 0 5px;
+            font-size: 1em;
+            color: $theme-color;
+            font-family: $lato-bold;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .add-btn-field {
+        margin-bottom: 10px;
+        .btn {
+            min-width: 100px;
+        }
+    }
+    .btn-field {
+        margin-top: 20px;
+    }
+    .upload-documents {
+        margin-top: 15px;
+        .form-group {
+            .file-upload-group {
+                @include calculation('width', 100%, 60px);
+                max-width: 360px;
+                display: inline-block;
+            }
+            .btn-remove-document {
+                vertical-align: top;
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .add-document {
+            margin-left: 15px;
+            i {
+                font-size: 10px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .table {
+        tr {
+            td {
+                &.action {
+                    a {
+                        cursor: pointer;
+                        +a {
+                            margin-left: 10px;
+                        }
+                        &.cancel-btn {
+                            i {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+#qm-homepage {
+    .pie-chart {
+        border: 1px solid $border-color;
+        #pieChart {
+            min-width: 280px;
+            height: 240px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .qm-status {
+        .table {
+            margin-bottom: 0;
+            tr {
+                td {
+                    p {
+                        &.reviewed {
+                            color: $info-color;
+                        }
+                        &.approved {
+                            color: $success-color;
+                        }
+                        &.rejected {
+                            color: $danger-color;
+                        }
+                        &.pending {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    #qm-homepage {
+        .qm-status {
+            margin-top: 15px;
+        }
+    }
+}

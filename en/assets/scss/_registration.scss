@@ -1,0 +1,101 @@
+#registration {
+    .wizard {
+        li {
+            width: 20%;
+        }
+        &.individual {
+            li {
+                width: 25%;
+            }
+        }
+    }
+    .wizard-panels {
+        .wizard-panel {
+            .panel-heading {
+                .panel-title {
+                    @include text-truncate;
+                }
+            }
+            .panel-body {
+                .form-group {
+                    margin-bottom: 30px;
+                    @include calculation('width', 100%, 60px);
+                    display: inline-block;
+                    vertical-align: middle;
+                    &.telephone-number {
+                        label {
+                            display: block;
+                        }
+                        .country_code {
+                            width: 80px;
+                            border-radius: 3px 0 0 3px;
+                            background-color: white;
+                            float: left;
+                            text-align: right;
+                        }
+                        .telephone_number {
+                            float: left;
+                            @include calculation('width', 100%, 80px);
+                            border-radius: 0 3px 3px 0;
+                            border-left: none;
+                        }
+                    }
+                }
+                .info-btn {
+                    cursor: pointer;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-top: -3px;
+                }
+            }
+            .company-details-row {
+                position: relative;
+                .btn-remove-company {
+                    cursor: pointer;
+                    z-index: 99;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    margin-top: -18px;
+                }
+            }
+        }
+        .btn-field {
+            .btn {
+                min-width: 100px;
+            }
+        }
+    }
+    .registration-form {
+        &.individual {
+            .wizard {
+                li {
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    #registration {
+        .wizard-panels {
+            .wizard-panel {
+                .panel-body {
+                    .form-group {
+                        @include calculation('width', 100%, 35px);
+                    }
+                    .padding-top-12 {
+                        padding-top: 0;
+                    }
+                }
+                .company-details-row {
+                    .btn-remove-company {
+                        right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

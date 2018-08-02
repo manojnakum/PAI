@@ -1,0 +1,206 @@
+.sidebar {
+    .sidebar-btn {
+        width: 100px;
+        background: $theme-color;
+        color: white;
+        position: fixed;
+        top: 50%;
+        left: -35px;
+        z-index: 1040;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+        text-transform: uppercase;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 12px;
+        font-family: $lato-bold;
+        border-radius: 0 0 5px 5px;
+        margin-top: -15px;
+        text-align: center;
+        cursor: pointer;
+        @include transform(rotate(-90deg));
+        i {
+            margin-left: 15px;
+            display: inline-block;
+            @include transform(rotate(90deg));
+        }
+    }
+    .sidebar-nav {
+        box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.15);
+        width: 250px;
+        background: $sidebar-bg;
+        position: fixed;
+        top: 0;
+        left: -260px;
+        bottom: 0;
+        z-index: 9998;
+        @include transition(0.35s ease-out);
+        &.toggle {
+            left: 0;
+            @include transition(0.35s ease-in);
+        }
+        .sidebar-header {
+            height: 40px;
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            .close-sidebar {
+                display: inline-block;
+                cursor: pointer;
+                font-size: 14px;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                float: right;
+            }
+        }
+        >ul {
+            @include calculation('height', 100%, 40px);
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        ul {
+            display: block;
+            width: 100%;
+            float: left;
+            >li {
+                border-bottom: 1px solid #ccc;
+                width: 100%;
+                float: left;
+                .badge {
+                    float: right;
+                }
+                >a {
+                    position: relative;
+                    display: block;
+                    padding: 13px 15px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding-left: 45px;
+                    @include transition(0.1s linear);
+                    @include text-truncate;
+                    i {
+                        font-size: 20px;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        vertical-align: middle;
+                    }
+                }
+                &:hover {
+                    >a {
+                        background: $theme-color;
+                        color: white;
+                        @include transition(0.1s linear);
+                        .badge {
+                            background-color: white;
+                            color: $theme-color;
+                        }
+                    }
+                }
+                &.has-submenu {
+                    >a {
+                        padding-right: 50px;
+                        &:after {
+                            font-weight: normal;
+                            font-size: 14px;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 40px;
+                            @include flex('flex', 'center', 'center', 'row');
+                            font-family: 'Flaticon';
+                            content: $font-Flaticon-plus;
+                        }
+                    }
+                    &.open {
+                        >a {
+                            &:after {
+                                content: $font-Flaticon-minus;
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            a {
+                                padding-left: 40px;
+                                position: relative;
+                                &:before {
+                                    position: absolute;
+                                    font-family: 'Flaticon';
+                                    content: $font-Flaticon-nav-right;
+                                    @include flex('flex', 'center', 'center', 'row');
+                                    width: 30px;
+                                    left: 5px;
+                                    top: 0;
+                                    bottom: 0;
+                                    font-weight: normal;
+                                    font-size: 10px;
+                                }
+                            }
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            &.has-childmenu {
+                                >a {
+                                    padding-right: 50px;
+                                    &:after {
+                                        font-weight: normal;
+                                        font-size: 14px;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 40px;
+                                        @include flex('flex', 'center', 'center', 'row');
+                                        font-family: 'Flaticon';
+                                        content: $font-Flaticon-plus;
+                                    }
+                                }
+                                &.open {
+                                    >a {
+                                        &:after {
+                                            content: $font-Flaticon-minus;
+                                        }
+                                    }
+                                }
+                                ul {
+                                    li {
+                                        a {
+                                            padding-left: 55px;
+                                            position: relative;
+                                            &:before {
+                                                position: absolute;
+                                                font-family: 'Flaticon';
+                                                content: $font-Flaticon-minus;
+                                                @include flex('flex', 'center', 'center', 'row');
+                                                width: 30px;
+                                                left: 25px;
+                                                top: 0;
+                                                bottom: 0;
+                                                font-weight: normal;
+                                                font-size: 8px;
+                                            }
+                                        }
+                                        &:last-child {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .childmenu {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .submenu {
+                    display: none;
+                }
+            }
+        }
+    }
+}

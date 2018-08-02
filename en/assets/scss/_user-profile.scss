@@ -1,0 +1,33 @@
+#my-downloads {
+    .table-bordered {
+        border-top: none;
+    }
+    .nav {
+        >li {
+            >a {
+                padding: 7px 10px;
+            }
+        }
+    }
+    .download-list {
+        .table {
+            thead {
+                tr {
+                    th {
+                        vertical-align: middle;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        white-space: normal;
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
