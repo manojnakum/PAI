@@ -28,7 +28,29 @@ function initMap() {
     });
 }
 
+function fixMegaMenu() {
+    if ($(window).width() > 990) {
+        var menuHeight = $('.main-container').height();
+        var megamenuHeight = $('.megamenu-nav').height();
+        $('.navbar-default').css('min-height', menuHeight + megamenuHeight);
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > menuHeight) {
+                $('.megamenu-nav').addClass('fixed-megamenu');
+            } else {
+                $('.megamenu-nav').removeClass('fixed-megamenu');
+            }
+        });
+    } else {
+        $('.navbar-default').css('min-height', 'auto');
+    }
+}
+
 $(document).ready(function() {
+    fixMegaMenu();
+
+    $(window).resize(function() {
+        fixMegaMenu();
+    });
     /* ============= Script to toggle sidebar ============= */
     $(document).on('click', '.sidebar-btn', function(e) {
         e.stopPropagation();
@@ -241,7 +263,7 @@ $(document).ready(function() {
     $(document).on('click', '.preview-image', function() {
         var imgSrc = $(this).attr('data-image');
         $('body').addClass('lockScroll');
-        $('body').append(' <div class="imagePreviewer"> <a class="closeButton"><span class="glyphicon glyphicon-remove"></span></a> <div class="imageWrapper"> <img src="'+ imgSrc +'" alt=""> </div></div>');
+        $('body').append(' <div class="imagePreviewer"> <a class="closeButton"><span class="glyphicon glyphicon-remove"></span></a> <div class="imageWrapper"> <img src="' + imgSrc + '" alt=""> </div></div>');
     });
     $(document).on('click', '.imagePreviewer .closeButton', function() {
         $('.imagePreviewer').remove();
@@ -337,7 +359,7 @@ $(document).ready(function() {
             $('.wizard li, .wizard-panels .wizard-panel').removeClass('current');
             $('.wizard li').removeClass('completed');
             $('.wizard li').eq(clickedIndex - 1).addClass('current');
-            for (var i = 0; i < clickedIndex-1; i++) {
+            for (var i = 0; i < clickedIndex - 1; i++) {
                 $('.wizard li').eq(i).addClass('completed');
             }
             navigateTo(clickedIndex - 1);
