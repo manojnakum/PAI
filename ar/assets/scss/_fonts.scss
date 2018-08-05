@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'latobold';
+    src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato-light-webfont.woff2') format('woff2'),
+         url('../fonts/lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'JannaLT-Bold';
+    src: url('../fonts/JannaLT-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/JannaLT-Bold.woff') format('woff'), url('../fonts/JannaLT-Bold.ttf') format('truetype'), url('../fonts/JannaLT-Bold.svg#JannaLT-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'JannaLT-Regular';
+  src: url('../fonts/JannaLT-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/JannaLT-Regular.woff') format('woff'), url('../fonts/JannaLT-Regular.ttf')  format('truetype'), url('../fonts/JannaLT-Regular.svg#JannaLT-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

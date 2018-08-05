@@ -1,0 +1,34 @@
+#new-project {
+    .form-group {
+        margin-bottom: 30px;
+    }
+    .references {
+        .panel-heading {
+            .panel-title {
+                margin-top: 7px;
+                @include calculation('width', 100%, 150px);
+                float: right;
+            }
+            .btn {
+                float: left;
+                i {
+                    font-size: 12px;
+                    margin-left: 7px;
+                }
+            }
+        }
+        .panel-body {
+            .no-margin {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .btn-field {
+        margin-top: 30px;
+        .btn {
+            +.btn {
+                margin-right: 10px;
+            }
+        }
+    }
+}

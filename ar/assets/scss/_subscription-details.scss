@@ -1,0 +1,102 @@
+#subscription-confirmation {
+    .subscription-details {
+        margin-top: 20px;
+        .vertical-table {
+            tr {
+                td {
+                    &.vt-head {
+                        text-align: left;
+                        width: 180px;
+                        max-width: 180px;
+                    }
+                }
+            }
+        }
+        .panel {
+            &.payment-gateway {
+                .panel-body {
+                    .radio {
+                        margin: 0;
+                        label {
+                            img {
+                                max-height: 36px;
+                            }
+                            &:before {
+                                top: 11px;
+                            }
+                        }
+                        + .radio {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cart-details {
+        .table {
+            tbody {
+                tr {
+                    td {
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+        .total {
+            text-align: left;
+            h4 {
+                font-size: 1.268em;
+                font-family: $droid-bold;
+                font-weight: bold;
+                span {
+                    display: inline-block;
+                    min-width: 150px;
+                    text-align: right;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    .btn-field {
+        margin-top: 20px;
+        text-align: left;
+        .btn {
+            + .btn {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    #subscription-confirmation {
+        .subscription-details {
+            .vertical-table {
+                tr {
+                    td {
+                        &.vt-head {
+                            width: 150px;
+                        }
+                    }
+                }
+                tr {
+                    td {
+                        border-left: none;
+                        border-right: none;
+                        width: 100%;
+                        display: block;
+                        &.vt-head {
+                            width: 100%;
+                            max-width: 100%;
+                            border: none;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+#contact {
+    .contact-details {
+        .detail-block {
+            h4 {
+                margin: 0 0 5px;
+                @include css3-prefix('text-shadow', '1px 1px 1px rgba(0,0,0,0.2)');
+            }
+            a,
+            p {
+                margin-bottom: 0;
+            }
+            +.detail-block {
+                margin-top: 15px;
+            }
+        }
+    }
+    #map {
+        margin-top: 40px;
+        height: 320px;
+        width: 100%;
+    }
+    .contact-form {
+        margin-top: 30px;
+        .form-group {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.marker-info {
+    h5 {
+        margin: 10px 0 0;
+    }
+}
+
+@media (max-width:767px) {
+    #contact {
+        .contact-details {
+            .detail-block {
+                margin-top: 15px;
+                    &.address {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }

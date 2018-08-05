@@ -1,0 +1,94 @@
+#my-application {
+    .filter-wrapper {
+        .entries {
+            label {
+                display: inline-block;
+            }
+            .form-control {
+                display: inline-block;
+                width: 70px;
+                margin: 0 5px;
+            }
+        }
+        .search {
+            .form-group {
+                label {
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+                .form-control {
+                    display: inline-block;
+                    width: 150px;
+                }
+            }
+        }
+    }
+    .table {
+        tbody {
+            tr {
+                td {
+                    &.actions {
+                        a {
+                            cursor: pointer;
+                        }
+                        span {
+                            margin: 0 4px;
+                            color: $theme-color;
+                        }
+                    }
+                    p {
+                    	&.approved {
+                    		color: $success-color;
+                    	}
+                    	&.rejected {
+                    		color: $danger-color;
+                    	}
+                    	&.pending {
+                    		color: $warning-color;
+                    	}
+                    }
+                }
+            }
+        }
+    }
+    .pagination-wrapper {
+        .pagination {
+            margin-top: 0;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    #my-application {
+        .pagination-wrapper {
+            .pagination-section {
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    #my-application {
+        .filter-wrapper {
+            .entries,
+            .search {
+                width: 100%;
+            }
+            .search {
+                text-align: right;
+                margin-top: 10px;
+                .form-group {
+                	label {
+                		margin-top: 7px;
+                        float: right;
+                	}
+                    .form-control {
+                        float: right;
+                        @include calculation('width', 100%, 60px);
+                    }
+                }
+            }
+        }
+    }
+}

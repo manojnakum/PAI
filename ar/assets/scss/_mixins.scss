@@ -1,0 +1,71 @@
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+/// Calculation
+@mixin calculation($param, $width1, $width2) {
+    @include css3-prefix($param, (calc(#{$width1} - #{$width2})));
+}
+
+/// Border Radius
+@mixin border-radius($radius) {
+    @include css3-prefix('border-radius', $radius);
+}
+
+/// Transform
+@mixin transform($params) {
+    @include css3-prefix('transform', $params);
+}
+
+/// Rotate
+@mixin rotate($deg) {
+    @include css3-prefix('transform', rotate($deg + deg));
+}
+
+/// Transition
+@mixin transition($properties...) {
+    @if length($properties) >=1 {
+        @include css3-prefix('transition', $properties);
+    }
+    @else {
+        @include css3-prefix('transition', "all 0.2s linear");
+    }
+}
+
+/// Flex
+@mixin flex($display, $content, $item, $direction) {
+	display: -webkit-flex;
+    @include css3-prefix('display', $display);
+    @include css3-prefix('justify-content', $content);
+    @include css3-prefix('align-items', $item);
+    @include css3-prefix('flex-direction', $direction);
+}
+
+@mixin filter-gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin line-clamping($line-height, $lines-to-show) {
+    max-height: $line-height * $lines-to-show;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

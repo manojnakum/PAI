@@ -1,0 +1,162 @@
+#cart {
+    .cart-details {
+        .table {
+            tbody {
+                tr {
+                    td {
+                        .responsive-attr {
+                            display: none;
+                            position: relative;
+                            margin-left: 15px;
+                            padding-left: 10px;
+                            font-weight: bold;
+                            &:after {
+                                content: ':';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .file {
+        .file-icon {
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 10px;
+            img {
+                max-width: 28px;
+            }
+        }
+        .file-details {
+            display: inline-block;
+            vertical-align: top;
+            @include calculation('width', 100%, 45px);
+            a {
+                color: $theme-color;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .action {
+        a {
+            cursor: pointer;
+        }
+    }
+    .total {
+        text-align: left;
+        h4 {
+            span {
+                margin-right: 15px;
+                width: 200px;
+                display: inline-block;
+                text-align: right;
+                font-weight: bold;
+            }
+        }
+    }
+    .btn-field {
+        text-align: left;
+        margin-top: 15px;
+        .btn {
+            +.btn {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    #cart {
+        .cart-details {
+            .table {
+                tbody {
+                    tr {
+                        td {
+                            &.language,
+                            &.price {
+                                width: 100px;
+                                max-width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .total {
+            h4 {
+                span {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    #cart {
+        .cart-details {
+            .table-responsive {
+                overflow-x: hidden;
+            }
+            .table {
+                width: 100%;
+                display: block;
+                thead {
+                    display: none;
+                }
+                tbody {
+                    width: 100%;
+                    display: block;
+                    tr {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        td {
+                            border: none;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            display: block;
+                            text-align: right;
+                            &.no-item {
+                                text-align: center;
+                            }
+                            .responsive-attr {
+                                display: inline-block;
+                            }
+                            &.price,
+                            &.language {
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                            }
+                            &.action {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                text-align: center;
+                                width: 40px !important;
+                                min-width: 40px !important;
+                            }
+                        }
+                        +tr {
+                            border-top: 1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .file {
+        padding-left: 40px;
+        .file-details {
+            p {
+                white-space: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &:focus {
+        outline: none !important;
+    }
+}
+
+body {
+    font-family: $droid-regular;
+    font-size: 14px;
+    &.pai-guest {
+        overflow-y: auto !important;
+        padding-top: 230px;
+        #s4-workspace {
+            overflow: hidden !important;
+            height: auto !important;
+        }
+    }
+    #s4-bodyContainer {
+        padding-bottom: 0 !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    line-height: 1.4;
+}
+
+body {
+    color: $text-color;
+}
+
+.ms-core-defaultFont {
+    color: $text-color;
+}
+
+.js-callout-body {
+    color: $text-color;
+}
+
+.btn {
+    &:active,
+    &.active {
+        outline: 0;
+        box-shadow: none !important;
+    }
+}
+
+.icon-btn {
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    padding: 0;
+    display: inline-block;
+    line-height: 34px;
+    cursor: pointer;
+    i {
+        font-size: 20px;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $text-color;
+    display: inline-block;
+    &:hover,
+    &:focus {
+        color: $theme-color;
+    }
+    &.btn {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+    &:active {
+        color: $text-color;
+    }
+}
+
+.ms-link:visited {
+    color: $text-color;
+    text-decoration: none;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit],
+button {
+    min-width: auto;
+}
+
+.wrapper {
+    min-height: 45vh;
+}
+
+.required {
+    margin-left: 5px;
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    &:after {
+        content: $font-Flaticon-asterisk;
+        font-family: 'Flaticon';
+        width: 5px;
+        height: 5px;
+        font-size: 7px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $danger-color;
+    }
+}
+
+.has-feedback label~.form-control-feedback {
+    top: auto;
+    bottom: 0;
+}
+
+.padding-top-12 {
+    padding-top: 12px;
+}
+
+.pull-left {
+    float: right !important;
+}
+
+.pull-right {
+    float: left !important;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    .page-top-header {
+        .breadcrumb-section {
+            float: right;
+            @include calculation('width', 100%, 170px);
+            .breadcrumb {
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                >li {
+                    +li {
+                        &:before {
+                            content: $font-Flaticon-arrows-left;
+                            font-family: 'Flaticon';
+                            font-size: 0.643em;
+                            color: $theme-color;
+                            top: 3px;
+                            position: relative;
+                            padding: 0 8px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+        .page-action {
+            float: left;
+            width: 140px;
+            text-align: left;
+            .btn-group {
+                .btn {
+                    padding: 0;
+                    width: 30px;
+                    height: 24px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    i {
+                        font-size: 10px;
+                    }
+                    &.active {
+                        color: white;
+                        background-color: $theme-color;
+                    }
+                }
+            }
+            .print-btn {
+                color: $text-color;
+                height: 24px;
+                width: 24px;
+                padding: 0;
+                margin-right: 10px;
+                i {
+                    font-size: 22px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    &.has-button {
+        position: relative;
+        input {
+            padding-left: 40px;
+        }
+        .btn {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 34px;
+            display: inline-block;
+            line-height: 34px;
+            width: 34px;
+            padding: 0;
+            color: #777;
+            &.valid {
+                color: $success-color;
+            }
+            &.invalid {
+                color: $danger-color;
+            }
+        }
+    }
+}
+
+.bootstrap-datetimepicker-widget .prev,
+.bootstrap-datetimepicker-widget .next {
+    @include rotate(180);
+}
+
+.panel-heading {
+    &.has-button {
+        display: table;
+        width: 100%;
+        .panel-title {
+            float: right;
+            margin-top: 7px;
+            @include calculation('width', 100%, 150px);
+        }
+        .btn {
+            float: left;
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.highcharts-menu {
+    .highcharts-menu-item {
+        padding: 5px 10px;
+        &:hover {
+            background: $theme-color;
+            color: white;
+        }
+    }
+    hr {
+        margin: 5px 0;
+    }
+}
+
+.highcharts-data-label {
+    direction: ltr;
+}
+
+@media(min-width:991px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media(max-width:480px) {
+    .hide-mobile {
+        display: none;
+    }
+    .page-title {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:767px) {
+    .hide-tablet {
+        display: none;
+    }
+    .page-title {
+        .page-top-header {
+            .breadcrumb-section {
+                display: none;
+            }
+            .page-action {
+                float: left;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    body {
+        &.pai-guest {
+            padding-top: 230px;
+        }
+    }
+}
+
+@media(max-width:991px) {
+    body {
+        &.pai-guest {
+            padding-top: 140px;
+        }
+    }
+    .caret {
+        margin-top: 6px !important;
+    }
+}

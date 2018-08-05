@@ -1,0 +1,79 @@
+.page-title {
+    .page-header {
+        font-size: 100%;
+        h1, h2, h3 {
+            font-size: 1.714em;
+        }
+        h4 {
+            font-size: 1.286em;
+        }
+        h5 {
+            font-size: 1em;
+        }
+        h6 {
+            font-size: 0.857em;
+        }
+    }
+}
+
+.page-content {
+    font-size: 100%;
+    h1 {
+        font-size: 1.714em;
+    }
+    h2 {
+        font-size: 1.714em;
+    }
+    h3 {
+        font-size: 1.714em;
+    }
+    h4 {
+        font-size: 1.286em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    h6 {
+        font-size: 0.857em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    .btn-sm {
+        font-size: 1em;
+    }
+    .btn-xs {
+        font-size: 0.857em;
+    }
+    .btn-lg {
+        font-size: 1em;
+        font-family: $droid-bold;
+    }
+    .page-header {
+        padding-bottom: 4px;
+        border-bottom-width: 1px;
+    }
+    .form-control {
+        font-size: 1em;
+        &.input-lg {
+            font-size: 1.286em;
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .page-title {
+        .page-header {
+            padding-bottom: 5px;
+            h1, h2, h3 {
+                font-size: 1.500em;
+            }
+            h4 {
+                font-size: 1.143em;
+            }
+        }
+    }
+}

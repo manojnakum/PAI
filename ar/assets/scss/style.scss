@@ -1,0 +1,37 @@
+/*
+Theme Name: PAI Custom Theme
+Author: Manoj Nakum
+Description: PAI Custom Theme is developed for Public Authority for Industry (Kuwait). Theme is based on Bootstrap v3.3.7 with custom element as well. CSS files are generating from SCSS code. 
+Version: 1.0
+Last Update: 20 August, 2017
+Tags: left-columns, right-sidebar, fullwidth-page, fixed-header
+*/
+
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import '../flaticon/flaticon.scss';
+@import 'megamenu';
+@import 'custom';
+@import 'elements';
+@import 'responsive_cms';
+@import 'header';
+@import 'footer';
+@import 'sidebar';
+@import 'homepage';
+@import 'subscription-details';
+@import 'registration';
+@import 'search-catalogue';
+@import 'cart';
+@import 'user-profile';
+@import 'project';
+@import 'technical-committee';
+@import 'faq';
+@import 'contact';
+@import 'qm-homepage';
+@import 'request-qm-license';
+@import 'my-application';
+@import 'view-application-details';
+@import 'inspection-list';
+@import 'inspection-sampling';
+@import 'final-report';

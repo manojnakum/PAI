@@ -1,0 +1,276 @@
+#request-qm-license {
+    .qm-license-form {
+        .qm-license-wizard {
+            li {
+                width: 11.1111%;
+            }
+        }
+    }
+    .wizard-panels {
+        .wizard-panel {
+            .form-group-zero {
+                tr {
+                    td {
+                        .form-group {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .panel-body {
+                .form-group {
+                    margin-bottom: 30px;
+                    @include calculation('width', 100%, 60px);
+                    display: inline-block;
+                    vertical-align: middle;
+                    > label {
+                        display: block;
+                    }
+                }
+                .btn-inline {
+                    vertical-align: middle;
+                    margin-top: 4px;
+                }
+                .form-group-wrapper {
+                    label {
+                        display: block;
+                    }
+                    .form-group {
+                        margin-bottom: 10px;
+                        @include calculation('width', 100%, 150px);
+                        display: inline-block;
+                        float: none;
+                        max-width: 360px;
+                    }
+                    .btn {
+                        display: inline-block;
+                        margin-right: 15px;
+                        vertical-align: top;
+                    }
+                }
+            }
+            .seperator {
+                display: block;
+                position: relative;
+                width: 100%;
+                text-align: center;
+                margin: 20px 0 10px;
+                span {
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    line-height: 32px;
+                    border: 2px solid $border-color;
+                    font-weight: bold;
+                }
+            }
+        }
+        .btn-field {
+            .btn {
+                min-width: 100px;
+                + .btn {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .instruction {
+            margin-bottom: 15px;
+            .buy-standard {
+                color: $theme-color;
+                font-weight: bold;
+            }
+            .btn {
+                min-width: 100px;
+                i {
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+    .table {
+        tbody {
+            tr {
+                td {
+                    a {
+                        cursor: pointer;
+                        + a {
+                            margin-right: 10px;
+                        }
+                    }
+                    &.logo {
+                        img {
+                            max-width: 100px;
+                            max-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#qm-schedule {
+    .requestee-info {
+        p {
+            span {
+                display: inline-block;
+                position: relative;
+                width: 120px;
+                font-weight: bold;
+                margin-right: 15px;
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    content: ':';
+                }
+            }
+        }
+    }
+    .table-responsive {
+        margin-top: 15px;
+        .table {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
+        }
+    }
+    .instructions {
+        h4 {
+            color: $theme-color;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+    }
+    .btn-field {
+        margin-top: 20px;
+    }
+}
+
+#declaration {
+    .pledge {
+        h4 {
+            margin-top: 0;
+        }
+    }
+    .upload-documents {
+        margin: 20px 0 30px;
+        .btn-download {
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    #request-qm-license {
+        .wizard {
+            li {
+                a {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .wizard-panels {
+            .wizard-panel {
+                .panel-body {
+                    .form-group {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    #declaration {
+        .upload-documents {
+            .col-sm-4 {
+                + .col-sm-4 {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    #request-qm-license {
+        .wizard-panels {
+            .wizard-panel {
+                .panel-body {
+                    .form-group-wrapper {
+                        .form-group {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #qm-schedule {
+        .requestee-info {
+            p {
+                span {
+                    display: block;
+                    margin: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .wizard {
+        li {
+            height: 32px;
+            line-height: 32px;
+            a {
+                padding: 0 3px;
+                position: relative;
+                z-index: 999;
+            }
+            &:after {
+                height: 24px;
+                width: 24px;
+                left: -12px;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .wizard {
+        li {
+            height: 24px;
+            line-height: 24px;
+            a {
+                padding: 0;
+                padding-left: 4px;
+                font-size: 12px;
+            }
+            &:after {
+                border-right-width: 1px;
+                border-top-width: 1px;
+                height: 18px;
+                width: 18px;
+                left: -8px;
+                top: 3px;
+            }
+            &:first-child {
+                a {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+    .btn-field {
+        p {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+#faq {
+    .faq-list {
+        .question-wrapper {
+            .question {
+                position: relative;
+                h4 {
+                    margin-top: 3px;
+                    float: right;
+                    @include calculation('width', 100%, 50px);
+                }
+                a {
+                    position: relative;
+                    float: left;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background: #444;
+                    color: white;
+                    text-align: center;
+                    line-height: 25px;
+                    border-radius: 50%;
+                    &:after {
+                        content: $font-Flaticon-minus;
+                        font-family: 'Flaticon';
+                        font-size: 12px;
+                        vertical-align: top;
+                    }
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        background: $theme-color;
+                    }
+                    &.collapsed {
+                        &:after {
+                            content: $font-Flaticon-plus;
+                        }
+                    }
+                }
+            }
+            .answer {
+                .page-header {
+                    margin-top: 0;
+                    p {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        span {
+                            font-weight: normal;
+                            color: $text-color;
+                        }
+                        &.raised-by,
+                        &.raised-on {
+                            float: right;
+                        }
+                        &.raised-on {
+                            margin-right: 15px;
+                        }
+                        &.answered-on {
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    #faq {
+        .faq-list {
+            .question-wrapper {
+                .answer {
+                    .page-header {
+                        p {
+                            margin-right: 0 !important;
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
