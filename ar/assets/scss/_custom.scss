@@ -12,7 +12,6 @@ body {
     font-size: 14px;
     &.pai-guest {
         overflow-y: auto !important;
-        padding-top: 230px;
         #s4-workspace {
             overflow: hidden !important;
             height: auto !important;
@@ -310,19 +309,9 @@ button {
     }
 }
 
-@media(max-width:1200px) {
-    body {
-        &.pai-guest {
-            padding-top: 230px;
-        }
-    }
-}
-
 @media(max-width:991px) {
-    body {
-        &.pai-guest {
-            padding-top: 140px;
-        }
+    .hide-md {
+        display: none !important;
     }
     .caret {
         margin-top: 6px !important;

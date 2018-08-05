@@ -28,7 +28,29 @@ function initMap() {
     });
 }
 
+function fixMegaMenu() {
+    if ($(window).width() > 990) {
+        var menuHeight = $('.main-container').height();
+        var megamenuHeight = $('.megamenu-nav').height();
+        $('.navbar-default').css('min-height', menuHeight + megamenuHeight);
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > menuHeight) {
+                $('.megamenu-nav').addClass('fixed-megamenu');
+            } else {
+                $('.megamenu-nav').removeClass('fixed-megamenu');
+            }
+        });
+    } else {
+        $('.navbar-default').css('min-height', 'auto');
+    }
+}
+
 $(document).ready(function() {
+    fixMegaMenu();
+
+    $(window).resize(function() {
+        fixMegaMenu();
+    });
     /* ============= Script to toggle sidebar ============= */
     $(document).on('click', '.sidebar-btn', function(e) {
         e.stopPropagation();
