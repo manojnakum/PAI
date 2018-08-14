@@ -2,7 +2,7 @@
     .sidebar-btn {
         width: 100px;
         background: $theme-color;
-        color: white;
+        color: white !important;
         position: fixed;
         top: 50%;
         left: -35px;
@@ -92,7 +92,7 @@
                 &:hover {
                     >a {
                         background: $theme-color;
-                        color: white;
+                        color: white !important;
                         @include transition(0.1s linear);
                         .badge {
                             background-color: white;
@@ -199,6 +199,7 @@
                 }
                 .submenu {
                     display: none;
+                    padding-left:15px;
                 }
             }
         }

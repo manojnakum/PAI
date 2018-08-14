@@ -2,10 +2,16 @@
 /*
 Theme Name: PAI Custom Theme
 Author: Manoj Nakum
+Contact: manojnakum13@gmail.com
 Description: PAI Custom Theme is developed for Public Authority for Industry (Kuwait). Theme is based on Bootstrap v3.3.7 with custom element as well. CSS files are generating from SCSS code. 
-Version: 1.0
-Last Update: 20 August, 2017
+Version: 1.1.2
+Last Update: 14 August, 2018
 Tags: left-columns, right-sidebar, fullwidth-page, fixed-header
+
+==============================================================================================
+
+NOTE: If you need to change CSS don't edit 'assets/css/style.css' directly. Either do changes in 'assets/scss/*' or do your own changes by adding seperate CSS file. You can contact me if you don't know how to do changes.
+
 */
 /* =========================== Color Variables =========================== */
 /* =========================== Font Variables =========================== */
@@ -461,12 +467,10 @@ a {
   color: #444;
   display: inline-block; }
   a:hover, a:focus {
-    color: #ee5423; }
+    color: #ee5423 !important; }
   a:visited {
     color: #444; }
   a.btn:hover, a.btn:focus {
-    text-decoration: none; }
-  a:hover, a:active {
     text-decoration: none; }
   a:active {
     color: #444; }
@@ -647,7 +651,7 @@ button {
   .form-group .parsley-errors-list {
     position: absolute;
     top: 100%;
-    font-size: 12px;
+    font-size: 14px;
     color: red;
     list-style: none; }
 
@@ -969,7 +973,7 @@ span.nonactive-standard {
       border-color: #ce3e10; }
       .btn.btn-outline.btn-primary:focus, .btn.btn-outline.btn-primary:hover {
         background-color: #ee5423;
-        color: white;
+        color: white !important;
         border-color: #ee5423; }
     .btn.btn-outline.btn-success {
       color: #39b54a;
@@ -1040,7 +1044,7 @@ span.nonactive-standard {
   .nav-tabs > li.active > a,
   .nav-tabs > li.active a:hover,
   .nav-tabs > li.active a:focus {
-    color: white;
+    color: white !important;
     background-color: #ee5423;
     border-color: #e64512; }
 
@@ -1221,14 +1225,14 @@ span.nonactive-standard {
     .wizard li.current {
       background-color: #f59e82; }
       .wizard li.current a {
-        color: black;
+        color: black !important;
         pointer-events: initial; }
       .wizard li.current:after, .wizard li.current:before {
         background-color: #f59e82; }
     .wizard li.completed {
       background-color: #ee5423; }
       .wizard li.completed a {
-        color: white;
+        color: white !important;
         pointer-events: initial; }
       .wizard li.completed:after, .wizard li.completed:before {
         background-color: #ee5423; }
@@ -1552,7 +1556,7 @@ body.lockScroll {
     .megamenu-nav .navbar-nav > li > a i {
       font-size: 20px; }
     .megamenu-nav .navbar-nav > li > a:hover, .megamenu-nav .navbar-nav > li > a:focus {
-      color: black;
+      color: black !important;
       background-color: rgba(255, 255, 255, 0.8); }
   .megamenu-nav .navbar-nav div > li > a {
     color: white;
@@ -1940,7 +1944,7 @@ footer {
       width: 36px;
       height: 36px;
       background: #444;
-      color: white;
+      color: white !important;
       text-align: center;
       line-height: 36px; }
       footer .social-links li a i {
@@ -2014,7 +2018,7 @@ footer {
 .sidebar .sidebar-btn {
   width: 100px;
   background: #ee5423;
-  color: white;
+  color: white !important;
   position: fixed;
   top: 50%;
   left: -35px;
@@ -2124,7 +2128,7 @@ footer {
           vertical-align: middle; }
       .sidebar .sidebar-nav ul > li:hover > a {
         background: #ee5423;
-        color: white;
+        color: white !important;
         -webkit-transition: 0.1s linear;
         -moz-transition: 0.1s linear;
         -ms-transition: 0.1s linear;
@@ -2306,7 +2310,8 @@ footer {
       .sidebar .sidebar-nav ul > li.has-submenu ul li .childmenu {
         display: none; }
       .sidebar .sidebar-nav ul > li .submenu {
-        display: none; }
+        display: none;
+        padding-left: 15px; }
 
 .slider-section .carousel .carousel-control {
   width: 32px;

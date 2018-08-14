@@ -67,7 +67,7 @@ a {
     display: inline-block;
     &:hover,
     &:focus {
-        color: $theme-color;
+        color: $theme-color !important;
     }
     &:visited {
         color: $text-color;
@@ -78,10 +78,10 @@ a {
             text-decoration: none;
         }
     }
-    &:hover,
-    &:active {
-        text-decoration: none;
-    }
+    // &:hover,
+    // &:active {
+    //     text-decoration: none;
+    // }
     &:active {
         color: $text-color;
     }

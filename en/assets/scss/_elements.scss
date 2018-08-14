@@ -31,7 +31,7 @@
     .parsley-errors-list {
         position: absolute;
         top: 100%;
-        font-size: 12px;
+        font-size: 14px;
         color: red;
         list-style: none;
     }
@@ -388,7 +388,7 @@ span {
             &:focus,
             &:hover {
                 background-color: $primary-color;
-                color: white;
+                color: white !important;
                 border-color: $primary-color;
             }
         }
@@ -484,7 +484,7 @@ span {
             >a,
             a:hover,
             a:focus {
-                color: white;
+                color: white !important;
                 background-color: $theme-color;
                 border-color: darken($theme-color, 5%);
             }
@@ -697,7 +697,7 @@ span {
         &.current {
             background-color: lighten($completed-color, 20%);
             a {
-                color: black;
+                color: black !important;
                 pointer-events: initial;
             }
             &:after,
@@ -708,7 +708,7 @@ span {
         &.completed {
             background-color: $completed-color;
             a {
-                color: white;
+                color: white !important;
                 pointer-events: initial;
             }
             &:after,
