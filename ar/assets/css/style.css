@@ -670,7 +670,7 @@ button {
   .form-group .parsley-errors-list {
     position: absolute;
     top: 100%;
-    font-size: 12px;
+    font-size: 14px;
     color: red;
     list-style: none; }
 
@@ -767,7 +767,7 @@ span.nonactive-standard {
     border-radius: 50%; }
     .modal .modal-header .close span {
       display: inline-block;
-      line-height: 22px; }
+      line-height: 20px; }
 
 .modal .modal-footer {
   padding: 10px 15px; }
@@ -989,7 +989,7 @@ span.nonactive-standard {
       border-color: #444; }
       .btn.btn-outline.btn-default:focus, .btn.btn-outline.btn-default:hover {
         background-color: #ee5423;
-        color: white;
+        color: white !important;
         border-color: #ee5423; }
     .btn.btn-outline.btn-primary {
       color: #ee5423;
@@ -1067,7 +1067,7 @@ span.nonactive-standard {
   .nav-tabs > li.active > a,
   .nav-tabs > li.active a:hover,
   .nav-tabs > li.active a:focus {
-    color: white;
+    color: white !important;
     background-color: #ee5423;
     border-color: #e64512; }
   .nav-tabs > li + li {
@@ -1588,7 +1588,7 @@ body.lockScroll {
     .megamenu-nav .navbar-nav > li > a i {
       font-size: 20px; }
     .megamenu-nav .navbar-nav > li > a:hover, .megamenu-nav .navbar-nav > li > a:focus {
-      color: black;
+      color: black !important;
       background-color: rgba(255, 255, 255, 0.8); }
   .megamenu-nav .navbar-nav div > li > a {
     color: white;
@@ -1981,7 +1981,7 @@ footer {
       width: 36px;
       height: 36px;
       background: #444;
-      color: white;
+      color: white !important;
       text-align: center;
       line-height: 36px; }
       footer .social-links li a i {
@@ -2211,7 +2211,6 @@ footer {
         .sidebar .sidebar-nav ul > li.has-submenu ul li a:before {
           position: absolute;
           font-family: 'Flaticon';
-          content: "";
           display: -webkit-flex;
           -webkit-display: flex;
           -moz-display: flex;
@@ -2336,7 +2335,8 @@ footer {
       .sidebar .sidebar-nav ul > li.has-submenu ul li .childmenu {
         display: none; }
       .sidebar .sidebar-nav ul > li .submenu {
-        display: none; }
+        display: none;
+        padding-right: 15px; }
 
 .slider-section .carousel .carousel-control {
   width: 32px;

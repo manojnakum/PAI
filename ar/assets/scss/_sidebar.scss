@@ -131,7 +131,7 @@
                                 &:before {
                                     position: absolute;
                                     font-family: 'Flaticon';
-                                    content: $font-Flaticon-nav-left;
+                                    // content: $font-Flaticon-nav-left;
                                     @include flex('flex', 'center', 'center', 'row');
                                     width: 30px;
                                     right: 5px;
@@ -199,6 +199,7 @@
                 }
                 .submenu {
                     display: none;
+                    padding-right:15px;
                 }
             }
         }

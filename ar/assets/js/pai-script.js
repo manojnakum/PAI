@@ -40,6 +40,13 @@ function fixMegaMenu() {
                 $('.megamenu-nav').removeClass('fixed-megamenu');
             }
         });
+        $("#s4-workspace").scroll(function() {
+            if ($("#s4-workspace").scrollTop() > menuHeight) {
+                $('.megamenu-nav').addClass('fixed-megamenu');
+            } else {
+                $('.megamenu-nav').removeClass('fixed-megamenu');
+            }
+        });
     } else {
         $('.navbar-default').css('min-height', 'auto');
     }
