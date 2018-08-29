@@ -219,6 +219,8 @@ span {
 }
 
 .checkbox {
+    display: inline-block;
+
     label {
         position: relative;
         padding-left: 25px;
@@ -277,6 +279,26 @@ span {
                     border-color: white;
                     @include transition(0.1s linear);
                 }
+            }
+        }
+    }
+
+    &.no-label {
+        height: 16px;
+        margin: 0;
+        vertical-align: middle;
+        input[type="checkbox"] {
+            margin: 0;
+        }
+        label {
+            max-height: 16px;
+            padding-left: 16px;
+            max-height: 16px;
+            &:before {
+                top: 0;
+            }
+            &:after {
+                top: 4px;
             }
         }
     }
@@ -652,11 +674,10 @@ span {
             padding: 0 15px;
             color: black;
             text-align: center;
-            cursor: pointer;
+            cursor: initial;
             font-size: 1em;
             font-family: $lato-bold;
             display: block;
-            pointer-events: none;
             text-decoration: none !important;
         }
         &:first-child {
@@ -689,16 +710,10 @@ span {
             @include transform(rotate(45deg));
             z-index: 9;
         }
-        &.opened {
-            a {
-                pointer-events: initial;
-            }
-        }
         &.current {
             background-color: lighten($completed-color, 20%);
             a {
                 color: black !important;
-                pointer-events: initial;
             }
             &:after,
             &:before {
@@ -709,7 +724,6 @@ span {
             background-color: $completed-color;
             a {
                 color: white !important;
-                pointer-events: initial;
             }
             &:after,
             &:before {
@@ -778,6 +792,25 @@ span {
         img {
             max-height: 100%;
             max-width: 100%;
+        }
+    }
+}
+
+
+/**** IE 10 specific styles ***/
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .imagePreviewer {
+        display: table;
+        width: 100%;
+        height: 100%;
+        .imageWrapper {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            img {
+                display: inline-block;
+            }
         }
     }
 }

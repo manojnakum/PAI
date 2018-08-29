@@ -88,6 +88,35 @@
                         left: 10px;
                         vertical-align: middle;
                     }
+                    >label {
+                        margin: 0;
+                        display: inline-block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        -webkit-text-overflow: ellipsis;
+                        -moz-text-overflow: ellipsis;
+                        -ms-text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                        vertical-align: middle;
+                        
+                    }
+                    &.has-badge {
+                        >label {
+                            width: calc(100% - 34px);
+                        }
+                        .badge {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            -webkit-text-overflow: ellipsis;
+                            -moz-text-overflow: ellipsis;
+                            -ms-text-overflow: ellipsis;
+                            -o-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+                            max-width: 30px;
+                        }
+                    }
                 }
                 &:hover {
                     >a {
@@ -97,6 +126,11 @@
                         .badge {
                             background-color: white;
                             color: $theme-color;
+                        }
+                        /**** IE 10 specific styles ***/
+                        @media screen and (-ms-high-contrast: active),
+                        (-ms-high-contrast: none) {
+                            text-decoration: none !important;
                         }
                     }
                 }
@@ -114,6 +148,14 @@
                             @include flex('flex', 'center', 'center', 'row');
                             font-family: 'Flaticon';
                             content: $font-Flaticon-plus;
+                            /**** IE 10 specific styles ***/
+                            @media screen and (-ms-high-contrast: active),
+                            (-ms-high-contrast: none) {
+                                text-align: center;
+                                text-decoration: none !important;
+                                display: block;
+                                top: 12px;
+                            }
                         }
                     }
                     &.open {
@@ -139,6 +181,14 @@
                                     bottom: 0;
                                     font-weight: normal;
                                     font-size: 10px;
+                                    /**** IE 10 specific styles ***/
+                                    @media screen and (-ms-high-contrast: active),
+                                    (-ms-high-contrast: none) {
+                                        text-align: center;
+                                        text-decoration: none !important;
+                                        display: block;
+                                        top: 16px;
+                                    }
                                 }
                             }
                             &:last-child {
@@ -199,7 +249,7 @@
                 }
                 .submenu {
                     display: none;
-                    padding-left:15px;
+                    padding-left: 15px;
                 }
             }
         }
