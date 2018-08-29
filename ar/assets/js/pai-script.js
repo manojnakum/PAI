@@ -344,11 +344,11 @@ $(document).ready(function() {
 
         // Previous button is easy, just go back
         $('.form-navigation .previous').click(function() {
-            var $wizardStep = $('.wizard li');
             navigateTo(curIndex() - 1);
+            var $wizardStep = $('.wizard li');
             var currentIndex = $('.wizard .current').index();
-            $('.wizard li').eq(currentIndex).removeClass('current');
-            $('.wizard li').eq(currentIndex).removeClass('completed');
+            $('.wizard li').eq(currentIndex).removeClass('current').addClass('opened');
+            $('.wizard li').eq(currentIndex - 1).removeClass('completed');
             $('.wizard li').eq(currentIndex - 1).addClass('current');
         });
 
@@ -366,16 +366,16 @@ $(document).ready(function() {
             $(section).find(':input').attr('data-parsley-group', 'block-' + index);
         });
         navigateTo(0); // Start at the beginning
-        $('.wizard li a').click(function() {
-            var clickedIndex = $(this).attr('data-wizardId');
-            $('.wizard li, .wizard-panels .wizard-panel').removeClass('current');
-            $('.wizard li').removeClass('completed');
-            $('.wizard li').eq(clickedIndex - 1).addClass('current');
-            for (var i = 0; i < clickedIndex-1; i++) {
-                $('.wizard li').eq(i).addClass('completed');
-            }
-            navigateTo(clickedIndex - 1);
-        });
+        // $('.wizard li a').click(function() {
+        //     var clickedIndex = $(this).attr('data-wizardId');
+        //     $('.wizard li, .wizard-panels .wizard-panel').removeClass('current');
+        //     $('.wizard li').removeClass('completed');
+        //     $('.wizard li').eq(clickedIndex - 1).addClass('current');
+        //     for (var i = 0; i < clickedIndex-1; i++) {
+        //         $('.wizard li').eq(i).addClass('completed');
+        //     }
+        //     navigateTo(clickedIndex - 1);
+        // });
     });
 
 });

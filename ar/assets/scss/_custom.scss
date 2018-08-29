@@ -317,3 +317,71 @@ button {
         margin-top: 6px !important;
     }
 }
+
+.loader-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    &.show-loader {
+        display: block;        
+    }
+    .ds-table {
+        display: table;
+        width: 100%;
+        height: 100%;
+        .ds-table-cell {
+            display: table-cell;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    .ooc-loader {
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        position: relative;
+        margin: 0 auto;
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 7px solid transparent;
+            border-top-color: $theme-color;
+        }
+        &:before {
+            z-index: 100;
+            animation: spin 1s infinite;
+        }
+        &:after {
+            border: 7px solid #FFFFFF;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
