@@ -601,6 +601,9 @@ button {
 .highcharts-menu hr {
   margin: 5px 0; }
 
+.navbar {
+  z-index: 99; }
+
 @media (min-width: 991px) {
   .hide-desktop {
     display: none; } }

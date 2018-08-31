@@ -622,6 +622,9 @@ button {
 .highcharts-data-label {
   direction: ltr; }
 
+.navbar {
+  z-index: 99; }
+
 @media (min-width: 991px) {
   .hide-desktop {
     display: none; } }
@@ -1591,7 +1594,7 @@ body.lockScroll {
       font-weight: 700; }
       .logo-nav .navbar-right .language-menu a img {
         max-height: 16px;
-        margin-right: 10px;
+        margin-left: 10px;
         vertical-align: middle;
         margin-top: -3px; }
     .logo-nav .navbar-right .language-menu .dropdown-menu {
