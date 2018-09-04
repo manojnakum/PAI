@@ -88,7 +88,7 @@
                         left: 10px;
                         vertical-align: middle;
                     }
-                    >label {
+                    >p {
                         margin: 0;
                         display: inline-block;
                         white-space: nowrap;
@@ -103,7 +103,7 @@
                         
                     }
                     &.has-badge {
-                        >label {
+                        >p {
                             width: calc(100% - 34px);
                         }
                         .badge {

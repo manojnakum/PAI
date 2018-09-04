@@ -2219,7 +2219,7 @@ footer {
           top: 10px;
           left: 10px;
           vertical-align: middle; }
-        .sidebar .sidebar-nav ul > li > a > label {
+        .sidebar .sidebar-nav ul > li > a > p {
           margin: 0;
           display: inline-block;
           white-space: nowrap;
@@ -2231,7 +2231,7 @@ footer {
           text-overflow: ellipsis;
           max-width: 100%;
           vertical-align: middle; }
-        .sidebar .sidebar-nav ul > li > a.has-badge > label {
+        .sidebar .sidebar-nav ul > li > a.has-badge > p {
           width: calc(100% - 34px); }
         .sidebar .sidebar-nav ul > li > a.has-badge .badge {
           white-space: nowrap;

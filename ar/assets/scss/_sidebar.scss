@@ -59,6 +59,7 @@
             @include calculation('height', 100%, 40px);
             overflow: hidden;
             overflow-y: auto;
+            direction: ltr;
         }
         ul {
             display: block;
@@ -81,6 +82,7 @@
                     padding-right: 45px;
                     @include transition(0.1s linear);
                     @include text-truncate;
+                    text-align: right;   
                     i {
                         font-size: 20px;
                         position: absolute;
@@ -88,9 +90,9 @@
                         right: 10px;
                         vertical-align: middle;
                     }
-                    >label {
+                    >p {
                         margin: 0;
-                        display: inline-block;
+                        display: inline-block;                     
                         white-space: nowrap;
                         overflow: hidden;
                         -webkit-text-overflow: ellipsis;
@@ -103,7 +105,7 @@
                         
                     }
                     &.has-badge {
-                        >label {
+                        >p {
                             width: calc(100% - 34px);
                         }
                         .badge {
