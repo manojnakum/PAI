@@ -389,3 +389,9 @@ button {
         transform: rotate(360deg);
     }
 }
+
+[class*="flaticon-"] {
+    &.green-icon {
+        color: green;
+    }
+}

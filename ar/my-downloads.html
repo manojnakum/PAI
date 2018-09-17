@@ -16,29 +16,7 @@
 </head>
 
 <body class="pai-guest">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <!-- Responsive Menu -->
-        <div class="collapse navbar-collapse top-header">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">الصفحة الرئيسية</a></li>
-                    <li><a href="#">عن الهيئة</a></li>
-                    <li><a href="#">إتصل بنا</a></li>
-                    <li><a href="#">إسأل الهيئة</a></li>
-                    <li><a href="#">تسوق معنا</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a>الثلاثاء, مايو 16 2017</a></li>
-                    <li class="dropdown language-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag"><img src="images/english.png" alt="EN"></span>English <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><span class="flag"><img src="images/english.png" alt="EN"></span>English</a></li>
-                            <li><a href="#"><span class="flag"><img src="images/arabic.png" alt="AR"></span>Arabic</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container main-container">
             <div class="navbar-header">
@@ -53,6 +31,13 @@
                 </a>
             </div>
             <div class="logo-nav clearfix">
+                <ul class="top-links">
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#">عن الهيئة</a></li>
+                    <li><a href="#">إتصل بنا</a></li>
+                    <li><a href="#">إسأل الهيئة</a></li>
+                    <li><a href="#">تسوق معنا</a></li>
+                </ul>
                 <ul class="nav navbar-nav navbar-left hide-desktop">
                     <li class="dropdown language-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag"><img src="images/english.png" alt="EN"></span>English <span class="caret"></span></a>
@@ -61,17 +46,27 @@
                             <li><a href="#"><span class="flag"><img src="images/arabic.png" alt="AR"></span>Arabic</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown logged-user">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Mr. Faras Ali Khan"><i class="fi flaticon-profile"></i> <span>Mr. Faras Ali Khan</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fi flaticon-profile"></i>تعديل الملف الشخصي</a></li>
-                            <li><a href="#"><i class="fi flaticon-my-download"></i>تنزيلاتي</a></li>
-                            <li><a href="#"><i class="fi flaticon-password"></i>تغيير كلمة السر</a></li>
-                            <li><a href="#"><i class="fi flaticon-logout"></i>خروج</a></li>
-                        </ul>
-                    </li>
+                    <div>
+                        <li class="dropdown logged-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Mr. Faras Ali Khan"><i class="fi flaticon-profile"></i> <span>Mr. Faras Ali Khan</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fi flaticon-profile"></i>تعديل الملف الشخصي</a></li>
+                                <li><a href="#"><i class="fi flaticon-my-download"></i>تنزيلاتي</a></li>
+                                <li><a href="#"><i class="fi flaticon-password"></i>تغيير كلمة السر</a></li>
+                                <li><a href="#"><i class="fi flaticon-logout"></i>خروج</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="hide-md"><a class="date">الثلاثاء, مايو 16 2017</a></li>
+                    <li class="dropdown language-menu hide-md">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag"><img src="images/english.png" alt="AR"></span>Arabic <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="flag"><img src="images/english.png" alt="EN"></span>English</a></li>
+                            <li><a href="#"><span class="flag"><img src="images/arabic.png" alt="AR"></span>Arabic</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#" class="icon-btn cart-btn" title="Cart"><i class="fi flaticon-cart"></i><span class="cart-counter">2</span></a></li>
                     <li>
                         <a class="show-search icon-btn" title="Search"><i class="fi flaticon-search"></i></a>
@@ -191,15 +186,17 @@
                     <li><a href="#">المطابقة</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown logged-user">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Mr. Faris Ali Khan"><i class="fi flaticon-profile"></i> <span>Mr. Faris Ali Khan</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fi flaticon-profile"></i>تعديل الملف الشخصي</a></li>
-                            <li><a href="#"><i class="fi flaticon-my-download"></i>تنزيلاتي</a></li>
-                            <li><a href="#"><i class="fi flaticon-password"></i>تغيير كلمة السر</a></li>
-                            <li><a href="#"><i class="fi flaticon-logout"></i>خروج</a></li>
-                        </ul>
-                    </li>
+                    <div>
+                        <li class="dropdown logged-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Mr. Faris Ali Khan"><i class="fi flaticon-profile"></i> <span>Mr. Faris Ali Khan</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fi flaticon-profile"></i>تعديل الملف الشخصي</a></li>
+                                <li><a href="#"><i class="fi flaticon-my-download"></i>تنزيلاتي</a></li>
+                                <li><a href="#"><i class="fi flaticon-password"></i>تغيير كلمة السر</a></li>
+                                <li><a href="#"><i class="fi flaticon-logout"></i>خروج</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -281,6 +278,10 @@
                 </div>
                 <div class="page-header clearfix">
                     <h1>بلدي تحميل</h1>
+                    <div class="sub-header has-fixed-button text-right">
+                        <p><span class="sub-heading">Selected Committee : </span>SC1 - Technical Subcommittee for Road vehicle & Tax</p>
+                        <button type="button" class="btn btn-primary" title="Change Member Profile"><i class="fi flaticon-change-member"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="page-content">

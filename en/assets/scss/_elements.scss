@@ -375,6 +375,30 @@ span {
         margin: 0 0 5px;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     }
+    .sub-header {
+        padding-right: 50px;
+        position: relative;
+        
+        p {
+            color: $text-color;
+            display: inline-block;
+            text-align: left;
+            margin-top: 8px;
+            span {
+                font-weight: bold;
+                &.sub-heading {
+                    color: $theme-color;
+                }
+            }
+        }
+        &.has-fixed-button {
+            .btn {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
 }
 
 .btn {
@@ -797,7 +821,9 @@ span {
 }
 
 
+
 /**** IE 10 specific styles ***/
+
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
     .imagePreviewer {

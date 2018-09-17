@@ -1,0 +1,137 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 17/09/2018 09:48
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-play:before { content: "\f100"; }
+.flaticon-schedule-approval:before { content: "\f101"; }
+.flaticon-appeal-ncr:before { content: "\f102"; }
+.flaticon-project-vote:before { content: "\f103"; }
+.flaticon-rss:before { content: "\f104"; }
+.flaticon-arrows-left:before { content: "\f105"; }
+.flaticon-catalogue:before { content: "\f106"; }
+.flaticon-arrows-right:before { content: "\f107"; }
+.flaticon-download:before { content: "\f108"; }
+.flaticon-arrows:before { content: "\f109"; }
+.flaticon-upload:before { content: "\f10a"; }
+.flaticon-home:before { content: "\f10b"; }
+.flaticon-project-flow:before { content: "\f10c"; }
+.flaticon-committee-admin:before { content: "\f10d"; }
+.flaticon-nav-right:before { content: "\f10e"; }
+.flaticon-check-mark:before { content: "\f10f"; }
+.flaticon-nav-left:before { content: "\f110"; }
+.flaticon-cart:before { content: "\f111"; }
+.flaticon-asterisk:before { content: "\f112"; }
+.flaticon-appeal:before { content: "\f113"; }
+.flaticon-appeal-approval:before { content: "\f114"; }
+.flaticon-project-author:before { content: "\f115"; }
+.flaticon-checklist:before { content: "\f116"; }
+.flaticon-training:before { content: "\f117"; }
+.flaticon-my-download:before { content: "\f118"; }
+.flaticon-recommendation:before { content: "\f119"; }
+.flaticon-facebook:before { content: "\f11a"; }
+.flaticon-inspection-order:before { content: "\f11b"; }
+.flaticon-youtube:before { content: "\f11c"; }
+.flaticon-inspection-list:before { content: "\f11d"; }
+.flaticon-view:before { content: "\f11e"; }
+.flaticon-e-services:before { content: "\f11f"; }
+.flaticon-project:before { content: "\f120"; }
+.flaticon-close:before { content: "\f121"; }
+.flaticon-news:before { content: "\f122"; }
+.flaticon-certificate:before { content: "\f123"; }
+.flaticon-lab-request:before { content: "\f124"; }
+.flaticon-admin:before { content: "\f125"; }
+.flaticon-notification-from:before { content: "\f126"; }
+.flaticon-prepare-certificate:before { content: "\f127"; }
+.flaticon-rejected-application:before { content: "\f128"; }
+.flaticon-agriculture:before { content: "\f129"; }
+.flaticon-inspection-sampling:before { content: "\f12a"; }
+.flaticon-information-technology:before { content: "\f12b"; }
+.flaticon-lab-results:before { content: "\f12c"; }
+.flaticon-inspection-schedule:before { content: "\f12d"; }
+.flaticon-project-bank:before { content: "\f12e"; }
+.flaticon-next:before { content: "\f12f"; }
+.flaticon-pause:before { content: "\f130"; }
+.flaticon-previous:before { content: "\f131"; }
+.flaticon-plus:before { content: "\f132"; }
+.flaticon-request-license:before { content: "\f133"; }
+.flaticon-application:before { content: "\f134"; }
+.flaticon-committee:before { content: "\f135"; }
+.flaticon-standard-verification:before { content: "\f136"; }
+.flaticon-print:before { content: "\f137"; }
+.flaticon-search:before { content: "\f138"; }
+.flaticon-down-arrow:before { content: "\f139"; }
+.flaticon-add:before { content: "\f13a"; }
+.flaticon-cancel:before { content: "\f13b"; }
+.flaticon-forum:before { content: "\f13c"; }
+.flaticon-final-report:before { content: "\f13d"; }
+.flaticon-edit:before { content: "\f13e"; }
+.flaticon-profile:before { content: "\f13f"; }
+.flaticon-ncr-followup:before { content: "\f140"; }
+.flaticon-certifications:before { content: "\f141"; }
+.flaticon-information:before { content: "\f142"; }
+.flaticon-logout:before { content: "\f143"; }
+.flaticon-people:before { content: "\f144"; }
+.flaticon-inspection-plan:before { content: "\f145"; }
+.flaticon-social:before { content: "\f146"; }
+.flaticon-standard-catalogue:before { content: "\f147"; }
+.flaticon-electrical:before { content: "\f148"; }
+.flaticon-civil:before { content: "\f149"; }
+.flaticon-inspection-allocation:before { content: "\f14a"; }
+.flaticon-link:before { content: "\f14b"; }
+.flaticon-ministry-approval:before { content: "\f14c"; }
+.flaticon-oil:before { content: "\f14d"; }
+.flaticon-project-schedule:before { content: "\f14e"; }
+.flaticon-management:before { content: "\f14f"; }
+.flaticon-my-projects:before { content: "\f150"; }
+.flaticon-poll:before { content: "\f151"; }
+.flaticon-health:before { content: "\f152"; }
+.flaticon-mechanical:before { content: "\f153"; }
+.flaticon-application-review:before { content: "\f154"; }
+.flaticon-ncr-application:before { content: "\f155"; }
+.flaticon-issued-certificate:before { content: "\f156"; }
+.flaticon-inspection-log:before { content: "\f157"; }
+.flaticon-track-record:before { content: "\f158"; }
+.flaticon-calendar:before { content: "\f159"; }
+.flaticon-password:before { content: "\f15a"; }
+.flaticon-iso:before { content: "\f15b"; }
+.flaticon-link-1:before { content: "\f15c"; }
+.flaticon-delete:before { content: "\f15d"; }
+.flaticon-metrology:before { content: "\f15e"; }
+.flaticon-e-service:before { content: "\f15f"; }
+.flaticon-twitter:before { content: "\f160"; }
+.flaticon-chemical:before { content: "\f161"; }
+.flaticon-minus:before { content: "\f162"; }
+.flaticon-pai-standard:before { content: "\f163"; }
+.flaticon-reports:before { content: "\f164"; }
+.flaticon-attachment:before { content: "\f165"; }
+.flaticon-administrator:before { content: "\f166"; }
+.flaticon-member:before { content: "\f167"; }
+.flaticon-secretary:before { content: "\f168"; }
+.flaticon-change-member:before { content: "\f169"; }
