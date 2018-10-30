@@ -408,8 +408,9 @@ button {
 .links-row {
     display: flex;
     flex-flow: row wrap;
+    margin-top: 30px;
 
-    .col-sm-4 {
+    [class^="col-"] {
         display: flex;
         align-items: stretch;
         flex-direction: column;
@@ -417,6 +418,7 @@ button {
     }
 
     .link-box {
+        margin-bottom: 30px;
         display: block;
         height: 100%;
         border: 1px solid #cccccc;
@@ -450,6 +452,7 @@ button {
 
         p {
             color: #777777 !important;
+            margin-bottom: 0;
         }
 
         &:hover {
@@ -467,6 +470,32 @@ button {
     }
 }
 
-.margin-top-40 {
-    margin-top: 40px;
+@media(max-width: 560px) {
+    .links-row {
+        [class^="col-"] {
+            width: 100%;
+        }
+
+        .link-box {
+            margin-bottom: 15px;
+            padding-top: 20px 10px 15px;
+            .icon-box {
+                width: 48px;
+                height: 48px;
+
+                i {
+                    line-height: 48px;
+                    font-size: 20px;
+                }
+            }
+
+            &:hover {
+                .icon-box {
+                    i {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
 }
