@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     &:focus {
         outline: none !important;
     }
@@ -10,13 +11,16 @@
 body {
     font-family: $lato-regular;
     font-size: 14px;
+
     &.pai-guest {
         overflow-y: auto !important;
+
         #s4-workspace {
             overflow: hidden !important;
             height: auto !important;
         }
     }
+
     #s4-bodyContainer {
         padding-bottom: 0 !important;
     }
@@ -35,6 +39,7 @@ body {
 }
 
 .btn {
+
     &:active,
     &.active {
         outline: 0;
@@ -50,6 +55,7 @@ body {
     display: inline-block;
     line-height: 34px;
     cursor: pointer;
+
     i {
         font-size: 20px;
     }
@@ -65,19 +71,25 @@ li {
 a {
     color: $text-color;
     display: inline-block;
+
     &:hover,
     &:focus {
         color: $theme-color !important;
     }
+
     &:visited {
         color: $text-color;
     }
+
     &.btn {
+
         &:hover,
         &:focus {
             text-decoration: none;
         }
-    } // &:hover,
+    }
+
+    // &:hover,
     // &:active {
     //     text-decoration: none;
     // }
@@ -108,6 +120,7 @@ button {
     display: inline-block;
     width: 10px;
     height: 10px;
+
     &:after {
         content: $font-Flaticon-asterisk;
         font-family: 'Flaticon';
@@ -132,14 +145,17 @@ button {
 
 .page-title {
     margin-bottom: 20px;
+
     .page-top-header {
         .breadcrumb-section {
             float: left;
             @include calculation('width', 100%, 170px);
+
             .breadcrumb {
                 background-color: transparent;
                 padding: 0;
                 margin: 0;
+
                 >li {
                     +li {
                         &:before {
@@ -155,31 +171,37 @@ button {
                 }
             }
         }
+
         .page-action {
             float: right;
             width: 140px;
             text-align: right;
+
             .btn-group {
                 .btn {
                     padding: 0;
                     width: 30px;
                     height: 24px;
                     font-weight: bold;
+
                     i {
                         font-size: 10px;
                     }
+
                     &.active {
                         color: white;
                         background-color: $theme-color;
                     }
                 }
             }
+
             .print-btn {
                 color: $text-color;
                 height: 24px;
                 width: 24px;
                 padding: 0;
                 margin-left: 10px;
+
                 i {
                     font-size: 22px;
                     vertical-align: top;
@@ -192,9 +214,11 @@ button {
 .form-group {
     &.has-button {
         position: relative;
+
         input {
             padding-right: 40px;
         }
+
         .btn {
             position: absolute;
             right: 0;
@@ -205,9 +229,11 @@ button {
             width: 34px;
             padding: 0;
             color: #777;
+
             &.valid {
                 color: $success-color;
             }
+
             &.iinvalid {
                 color: $danger-color;
             }
@@ -219,13 +245,16 @@ button {
     &.has-button {
         display: table;
         width: 100%;
+
         .panel-title {
             float: left;
             margin-top: 7px;
             @include calculation('width', 100%, 150px);
         }
+
         .btn {
             float: right;
+
             i {
                 margin-right: 10px;
             }
@@ -236,11 +265,13 @@ button {
 .highcharts-menu {
     .highcharts-menu-item {
         padding: 5px 10px;
+
         &:hover {
             background: $theme-color;
             color: white;
         }
     }
+
     hr {
         margin: 5px 0;
     }
@@ -260,6 +291,7 @@ button {
     .hide-mobile {
         display: none;
     }
+
     .page-title {
         margin-bottom: 10px;
     }
@@ -269,11 +301,13 @@ button {
     .hide-tablet {
         display: none;
     }
+
     .page-title {
         .page-top-header {
             .breadcrumb-section {
                 display: none;
             }
+
             .page-action {
                 float: left;
             }
@@ -285,6 +319,7 @@ button {
     .hide-md {
         display: none !important;
     }
+
     .caret {
         margin-top: 6px !important;
     }
@@ -299,13 +334,16 @@ button {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
+
     &.show-loader {
         display: block;
     }
+
     .ds-table {
         display: table;
         width: 100%;
         height: 100%;
+
         .ds-table-cell {
             display: table-cell;
             width: 100%;
@@ -320,6 +358,7 @@ button {
         border-radius: 100%;
         position: relative;
         margin: 0 auto;
+
         &:after,
         &:before {
             content: "";
@@ -332,10 +371,12 @@ button {
             border: 7px solid transparent;
             border-top-color: $theme-color;
         }
+
         &:before {
             z-index: 100;
             animation: spin 1s infinite;
         }
+
         &:after {
             border: 7px solid #FFFFFF;
         }
@@ -362,4 +403,70 @@ button {
     &.green-icon {
         color: green;
     }
+}
+
+.links-row {
+    display: flex;
+    flex-flow: row wrap;
+
+    .col-sm-4 {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .link-box {
+        display: block;
+        height: 100%;
+        border: 1px solid #cccccc;
+        border-radius: 7px;
+        padding: 30px 15px 20px;
+        text-align: center;
+        text-decoration: none !important;
+        @include transition(0.1s linear);
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto;
+            background: $theme-color;
+            border-radius: 50%;
+            text-align: center;
+
+            i {
+                color: #ffffff;
+                line-height: 64px;
+                @include transition(0.2s linear);
+                font-size: 26px;
+            }
+        }
+
+        h4 {
+            color: #000000 !important;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        p {
+            color: #777777 !important;
+        }
+
+        &:hover {
+            border-color: $theme-color;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            @include transition(0.1s linear);
+
+            .icon-box {
+                i {
+                    font-size: 32px;
+                    @include transition(0.2s linear);
+                }
+            }
+        }
+    }
+}
+
+.margin-top-40 {
+    margin-top: 40px;
 }

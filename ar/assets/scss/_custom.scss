@@ -395,3 +395,68 @@ button {
         color: green;
     }
 }
+.links-row {
+    display: flex;
+    flex-flow: row wrap;
+
+    .col-sm-4 {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .link-box {
+        display: block;
+        height: 100%;
+        border: 1px solid #cccccc;
+        border-radius: 7px;
+        padding: 30px 15px 20px;
+        text-align: center;
+        text-decoration: none !important;
+        @include transition(0.1s linear);
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto;
+            background: $theme-color;
+            border-radius: 50%;
+            text-align: center;
+
+            i {
+                color: #ffffff;
+                line-height: 64px;
+                @include transition(0.2s linear);
+                font-size: 26px;
+            }
+        }
+
+        h4 {
+            color: #000000 !important;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        p {
+            color: #777777 !important;
+        }
+
+        &:hover {
+            border-color: $theme-color;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            @include transition(0.1s linear);
+
+            .icon-box {
+                i {
+                    font-size: 32px;
+                    @include transition(0.2s linear);
+                }
+            }
+        }
+    }
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
