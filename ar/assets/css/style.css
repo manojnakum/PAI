@@ -736,36 +736,15 @@ button {
   color: green; }
 
 .links-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
   margin-top: 30px; }
-  .links-row [class^="col-"] {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
   .links-row .link-box {
     margin-bottom: 30px;
     display: block;
-    height: 100%;
     border: 1px solid #cccccc;
     border-radius: 7px;
     padding: 30px 15px 20px;
     text-align: center;
+    min-height: 220px;
     text-decoration: none !important;
     -webkit-transition: 0.1s linear;
     -moz-transition: 0.1s linear;
@@ -791,10 +770,20 @@ button {
     .links-row .link-box h4 {
       color: #000000 !important;
       font-weight: 700;
-      font-size: 16px; }
+      font-size: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-height: 43px;
+      line-height: 1.3; }
     .links-row .link-box p {
       color: #777777 !important;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-height: 40px; }
     .links-row .link-box:hover {
       border-color: #ee5423;
       -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
@@ -814,16 +803,20 @@ button {
 
 @media (max-width: 560px) {
   .links-row [class^="col-"] {
-    width: 100%; }
+    width: 100% !important; }
   .links-row .link-box {
     margin-bottom: 15px;
-    padding-top: 20px 10px 15px; }
+    padding: 20px 10px 15px; }
     .links-row .link-box .icon-box {
       width: 48px;
       height: 48px; }
       .links-row .link-box .icon-box i {
         line-height: 48px;
         font-size: 20px; }
+    .links-row .link-box h4,
+    .links-row .link-box p {
+      overflow: visible;
+      max-height: none; }
     .links-row .link-box:hover .icon-box i {
       font-size: 26px; } }
 
